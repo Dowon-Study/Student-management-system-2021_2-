@@ -1,0 +1,25 @@
+﻿  main.c
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(108,11): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(108,11): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(84,1): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(174,54): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(174,54): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(169,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'char *'과(와) 다릅니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(169,1): warning C4047: '초기화 중': 'char'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(297,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(297,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(310,23): warning C4474: 'scanf_s' : 서식 문자열에 전달된 인수가 너무 많습니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(310,23): message : 자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(432,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(432,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(443,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(443,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(428,11): warning C4101: 'num1' :참조되지 않은 지역 변수입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(463,16): warning C4047: '=': 'char'의 간접 참조 수준이 'char [2]'과(와) 다릅니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(476,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(476,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(487,10): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(487,10): message : 이 인수는 버퍼 크기로 사용됩니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(473,7): warning C4101: 'temp' :참조되지 않은 지역 변수입니다.
+C:\Users\광운MOOC센터\Desktop\finaltest\main.c(535,1): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+  finaltest.vcxproj -> C:\Users\광운MOOC센터\Desktop\finaltest\x64\Debug\finaltest.exe
