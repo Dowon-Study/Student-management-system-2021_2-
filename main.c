@@ -1,10 +1,11 @@
+//ê³ ê¸‰Cí”„ë¡œê·¸ë˜ë° 
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
 #include <string.h>
 
 
-//±¸Á¶Ã¼ ¼±¾ğ
+//êµ¬ì¡°ì²´ ì„ ì–¸
 struct _info
 {
 	unsigned long number;
@@ -29,7 +30,7 @@ struct _info1
 };
 typedef struct _info1 INFO1;
 
-//Àü¿ªº¯¼ö
+//ì „ì—­ë³€ìˆ˜
 int count = 1;
 int dcount = 0;
 unsigned int address = sizeof(INFO);
@@ -38,7 +39,7 @@ int SN = 0;
 #define datasize sizeof(INFO)
 #define datasize1 sizeof(INFO1)
 
-//¸ŞÀÎ ÇÔ¼öµé
+//ë©”ì¸ í•¨ìˆ˜ë“¤
 void insert_member(FILE* fp, FILE* fp1);
 void modify_member(FILE* fp);
 void delete_member(FILE* fp, FILE* fp1);
@@ -50,7 +51,7 @@ void view_help();
 void printTitle();
 
 
-//ºÎ°¡ÀûÀÎ ÇÔ¼öµé
+//ë¶€ê°€ì ì¸ í•¨ìˆ˜ë“¤
 void save_data(INFO temp, INFO1 temp1, FILE* fp, FILE* fp1);
 void fqsort(INFO temp, FILE* fp);
 int disk_comp( FILE* fp);
@@ -77,7 +78,7 @@ int main(void) {
 
 
 	if (fp == NULL) {
-		printf("ÆÄÀÏ °³¹æ ½ÇÆĞ!!! \n");
+		printf("íŒŒì¼ ê°œë°© ì‹¤íŒ¨!!! \n");
 		exit(1);
 	}
 
@@ -95,15 +96,15 @@ int main(void) {
 
 		printTitle();
 
-		printf("I> È¸¿øµî·Ï\n");
-		printf("M> È¸¿øÁ¤º¸ ¼öÁ¤\n");
-		printf("D> È¸¿øÁ¤º¸ »èÁ¦\n");
-		printf("S> È¸¿ø°Ë»ö\n");
-		printf("L> È¸¿ø¸ñ·Ï\n");
-		printf("N> ½Ã½ºÅÛÃÊ±âÈ­\n");
-		printf("X> ÀÚ·áÁ¤¸®\n");
-		printf("H> µµ¿ò¸»\n");
-		printf("Q> Á¾·á\n");
+		printf("I> íšŒì›ë“±ë¡\n");
+		printf("M> íšŒì›ì •ë³´ ìˆ˜ì •\n");
+		printf("D> íšŒì›ì •ë³´ ì‚­ì œ\n");
+		printf("S> íšŒì›ê²€ìƒ‰\n");
+		printf("L> íšŒì›ëª©ë¡\n");
+		printf("N> ì‹œìŠ¤í…œì´ˆê¸°í™”\n");
+		printf("X> ìë£Œì •ë¦¬\n");
+		printf("H> ë„ì›€ë§\n");
+		printf("Q> ì¢…ë£Œ\n");
 
 		scanf_s("%s", select, sizeof(select));
 
@@ -143,35 +144,35 @@ int main(void) {
 }
 
 
-//»ğÀÔ ÇÔ¼ö
+//ì‚½ì… í•¨ìˆ˜
 void insert_member(FILE* fp,FILE* fp1) {
 	
 	INFO temp;
 	char option_1[3];
 
 
-	printf("\nÈ¸¿øÀÇ ±âº» Á¤º¸¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À...\n\n");
+	printf("\níšŒì›ì˜ ê¸°ë³¸ ì •ë³´ë¥¼ ì…ë ¥í•˜ì‹­ì‹œì˜¤...\n\n");
 
 
-	printf("> ¹ø È£ : "); scanf_s("%d", &temp.number); getchar();
-	printf("> È¸¿øID : "); gets_s(temp.id, sizeof(temp.id));
-	printf("> ºñ¹Ğ¹øÈ£ : "); gets_s(temp.passworld, sizeof(temp.passworld));
-	printf("> ÀÌ ¸§ : "); gets_s(temp.name, sizeof(temp.name));
-	printf("> ¼º º° : "); gets_s(temp.gender, sizeof(temp.gender));
-	printf("> ³ª ÀÌ : "); gets_s(temp.age, sizeof(temp.age));
-	printf("> Á÷À§ : "); gets_s(temp.rank, sizeof(temp.rank));
-	printf("> È¸»ç¸í : "); gets_s(temp.company, sizeof(temp.company));
-	printf("> ÁÖ¼Ò : "); gets_s(temp.address, sizeof(temp.address));
-	printf("> ¿ìÆí¹øÈ£ : "); gets_s(temp.post, sizeof(temp.post));
-	printf("> ÀüÈ­¹øÈ£ : "); gets_s(temp.phone, sizeof(temp.phone));
-	printf("> ÈŞ´ëÆù : "); gets_s(temp.handphone, sizeof(temp.handphone));
+	printf("> ë²ˆ í˜¸ : "); scanf_s("%d", &temp.number); getchar();
+	printf("> íšŒì›ID : "); gets_s(temp.id, sizeof(temp.id));
+	printf("> ë¹„ë°€ë²ˆí˜¸ : "); gets_s(temp.passworld, sizeof(temp.passworld));
+	printf("> ì´ ë¦„ : "); gets_s(temp.name, sizeof(temp.name));
+	printf("> ì„± ë³„ : "); gets_s(temp.gender, sizeof(temp.gender));
+	printf("> ë‚˜ ì´ : "); gets_s(temp.age, sizeof(temp.age));
+	printf("> ì§ìœ„ : "); gets_s(temp.rank, sizeof(temp.rank));
+	printf("> íšŒì‚¬ëª… : "); gets_s(temp.company, sizeof(temp.company));
+	printf("> ì£¼ì†Œ : "); gets_s(temp.address, sizeof(temp.address));
+	printf("> ìš°í¸ë²ˆí˜¸ : "); gets_s(temp.post, sizeof(temp.post));
+	printf("> ì „í™”ë²ˆí˜¸ : "); gets_s(temp.phone, sizeof(temp.phone));
+	printf("> íœ´ëŒ€í° : "); gets_s(temp.handphone, sizeof(temp.handphone));
 
 	INFO1 temp1 = { temp.id , NULL, count};
 	SN = temp.number;
 	while (1)
 	{
 
-		printf("S>ÀúÀå, M>¸ŞÀÎ, Q>Á¾·á : "); scanf_s("%s", &option_1, sizeof(option_1)); getchar();
+		printf("S>ì €ì¥, M>ë©”ì¸, Q>ì¢…ë£Œ : "); scanf_s("%s", &option_1, sizeof(option_1)); getchar();
 
 		if (strcmp(option_1, "S") == 0) {
 
@@ -196,7 +197,7 @@ void insert_member(FILE* fp,FILE* fp1) {
 	}
 }
 
-//µ¥ÀÌÅÍ ÀúÀå ÇÔ¼ö
+//ë°ì´í„° ì €ì¥ í•¨ìˆ˜
 void save_data(INFO temp, INFO1 temp1, FILE* fp, FILE* fp1) {
 
 	fseek(fp1, address1, SEEK_SET);
@@ -212,7 +213,7 @@ void save_data(INFO temp, INFO1 temp1, FILE* fp, FILE* fp1) {
 
 }
 
-//ÀÏ·Ã¹øÈ£¿¡ µû¶ó Á¤·Ä Á¤¸®
+//ì¼ë ¨ë²ˆí˜¸ì— ë”°ë¼ ì •ë ¬ ì •ë¦¬
 void fqsort(INFO temp, FILE* fp) {
 	
 	disk_comp(fp);
@@ -221,7 +222,7 @@ void fqsort(INFO temp, FILE* fp) {
 
 }
 	
-//¿À¸§Â÷¼øÀ¸·Î Á¤¸®
+//ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë¦¬
 int disk_comp(FILE* fp) {
 	INFO temp;
 	
@@ -256,14 +257,14 @@ int disk_comp(FILE* fp) {
 }
 
 
-//µ¥ÀÌÅÍ À§Ä¡ ¹Ù²ãÁÖ±â
+//ë°ì´í„° ìœ„ì¹˜ ë°”ê¿”ì£¼ê¸°
 void disk_swap(FILE* fp,int num1, int num2) {
 	INFO temp;
 
 	fseek(fp, num1, SEEK_SET);
 	fread(&temp, sizeof(INFO), 1, fp);
 
-	INFO temp_1 = temp; //ÀÛÀº °ª
+	INFO temp_1 = temp; //ì‘ì€ ê°’
 	
 
 	fseek(fp, num2, SEEK_SET);
@@ -271,7 +272,7 @@ void disk_swap(FILE* fp,int num1, int num2) {
 	
 	
 
-	INFO temp_2 = temp; //Å«°ª
+	INFO temp_2 = temp; //í°ê°’
 	
 
 	fseek(fp, num2, SEEK_SET);
@@ -293,7 +294,7 @@ void modify_member(FILE* fp) {
 	int num, num1;
 	INFO temp;
 
-	printf("¼öÁ¤ÇÒ »ç¿ëÀÚ ID¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+	printf("ìˆ˜ì •í•  ì‚¬ìš©ì IDë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 	scanf_s("%s", &ID, sizeof(ID)); getchar();
 
 	num = find_member(fp,ID);
@@ -306,10 +307,10 @@ void modify_member(FILE* fp) {
 
 	display_member(fp, datasize * num);
 
-	printf("¼öÁ¤ÇÒ Ç×¸ñÀ» ¼±ÅÃ ÇÏ¼¼¿ä : ");
+	printf("ìˆ˜ì •í•  í•­ëª©ì„ ì„ íƒ í•˜ì„¸ìš” : ");
 	scanf_s("%d", &num1, sizeof(num1)); getchar();
 
-	printf("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("ë°ì´í„°ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 
 
 	if (num1 = 1) {
@@ -402,18 +403,18 @@ void display_member(FILE* fp,int address_1) {
 
 	fread(&temp, sizeof(INFO), 1, fp);
 
-	printf("\n > ¹ø È£    : %ld\n", temp.number);
-	printf(" > È¸¿øID    : %s\n", temp.id);
-	printf(" 1. ºñ¹Ğ¹øÈ£    : %s\n", temp.passworld);
-	printf(" 2. ÀÌ¸§    : %s\n", temp.name);
-	printf(" 3. ¼ºº°    : %s\n", temp.gender);
-	printf(" 4. ³ªÀÌ    : %s\n", temp.age);
-	printf(" 5. Á÷À§    : %s\n", temp.rank);
-	printf(" 6. È¸»ç¸í    : %s\n", temp.company);
-	printf(" 7. ÁÖ¼Ò    : %s\n", temp.address);
-	printf(" 8. ¿ìÆí¹øÈ£    : %s\n", temp.post);
-	printf(" 9. ÀüÈ­¹øÈ£    : %s\n", temp.phone);
-	printf("10. ÈŞ´ëÆù    : %s\n", temp.handphone);
+	printf("\n > ë²ˆ í˜¸    : %ld\n", temp.number);
+	printf(" > íšŒì›ID    : %s\n", temp.id);
+	printf(" 1. ë¹„ë°€ë²ˆí˜¸    : %s\n", temp.passworld);
+	printf(" 2. ì´ë¦„    : %s\n", temp.name);
+	printf(" 3. ì„±ë³„    : %s\n", temp.gender);
+	printf(" 4. ë‚˜ì´    : %s\n", temp.age);
+	printf(" 5. ì§ìœ„    : %s\n", temp.rank);
+	printf(" 6. íšŒì‚¬ëª…    : %s\n", temp.company);
+	printf(" 7. ì£¼ì†Œ    : %s\n", temp.address);
+	printf(" 8. ìš°í¸ë²ˆí˜¸    : %s\n", temp.post);
+	printf(" 9. ì „í™”ë²ˆí˜¸    : %s\n", temp.phone);
+	printf("10. íœ´ëŒ€í°    : %s\n", temp.handphone);
 
 	return;
 }
@@ -421,14 +422,14 @@ void display_member(FILE* fp,int address_1) {
 int get_offset() {
 	return address;
 }
-//»èÁ¦ÇÏ´Â ÇÔ¼ö
+//ì‚­ì œí•˜ëŠ” í•¨ìˆ˜
 void delete_member(FILE* fp, FILE* fp1) {
 
 	char ID[10],ch[3];
 	int num, num1;
 	INFO temp;
 
-	printf("»èÁ¦ÇÒ »ç¿ëÀÚ ID¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+	printf("ì‚­ì œí•  ì‚¬ìš©ì IDë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 	scanf_s("%s", &ID, sizeof(ID)); getchar();
 
 	num = find_member(fp, ID);
@@ -439,7 +440,7 @@ void delete_member(FILE* fp, FILE* fp1) {
 
 	fread(&temp, sizeof(INFO), 1, fp);
 
-	printf("»èÁ¦ÇÏ½Ã°Ú½À´Ï±î ?(y/n) : ");
+	printf("ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ ?(y/n) : ");
 	scanf_s("%s", &ch, sizeof(ch)); getchar();
 	
 	if (strcmp(ch, "y") == 0) {
@@ -472,18 +473,18 @@ void search_member(FILE* fp, FILE* fp1) {
 	int num;
 	INFO temp;
 
-	printf("°Ë»öÇÒ »ç¿ëÀÚ ID¸¦ ÀÔ·ÂÇÏ½Ã¿À : ");
+	printf("ê²€ìƒ‰í•  ì‚¬ìš©ì IDë¥¼ ì…ë ¥í•˜ì‹œì˜¤ : ");
 	scanf_s("%s", &ID, sizeof(ID)); getchar();
 
 	num = find_member(fp, ID);
 
 	if (count <=  num) {
-		printf("»ç¿ëÀÚ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù...\n");
+		printf("ì‚¬ìš©ìë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤...\n");
 		return;
 	}
 	display_member(fp, datasize * num);
 
-	printf("M>¸ŞÀÎ Q>Á¾·á : ");
+	printf("M>ë©”ì¸ Q>ì¢…ë£Œ : ");
 	scanf_s("%s", &ch, sizeof(ch)); getchar();
 
 	if (strcmp(ch, "M") == 0) {
@@ -505,7 +506,7 @@ void list_member(FILE* fp) {
 
 	for (int i = 1; i < count; i++) {
 		display_member(fp,num);
-		printf("¾Æ¹«Å°³ª ´©¸£½Ê½Ã¿À...");
+		printf("ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ì‹­ì‹œì˜¤...");
 		getchar(); getchar();
 		num += datasize;
 
@@ -528,7 +529,7 @@ void reset() {
 
 
 	if (fp == NULL) {
-		printf("ÆÄÀÏ °³¹æ ½ÇÆĞ!!! \n");
+		printf("íŒŒì¼ ê°œë°© ì‹¤íŒ¨!!! \n");
 		exit(1);
 	}
 
@@ -550,7 +551,7 @@ void indexing(FILE* fp, FILE* fp1,int num) {
 	FILE* fp_1 = fp;
 	FILE* fp_2 = fp1;
 	
-	printf("ÀÚ·á¸¦ Á¤¸®ÇÏ°í ÀÖ½À´Ï´Ù...\n");
+	printf("ìë£Œë¥¼ ì •ë¦¬í•˜ê³  ìˆìŠµë‹ˆë‹¤...\n");
 	
 	PGINFO header = { 0.9,count,dcount,num,"MMS(Membership Management System)" };
 	
@@ -572,7 +573,7 @@ void indexing(FILE* fp, FILE* fp1,int num) {
 	
 	fp = fp_1;
 
-	printf("ÀÚ·áÁ¤¸®°¡ ¿Ï·áµÇ¾ú½À´Ï´Ù...\n");
+	printf("ìë£Œì •ë¦¬ê°€ ì™„ë£Œë˜ì—ˆìŠµë‹ˆë‹¤...\n");
 
 	getchar(); getchar();
 
@@ -581,12 +582,12 @@ void indexing(FILE* fp, FILE* fp1,int num) {
 
 void view_help() {
 	printf("----------------------- HELP MESSAGE -----------------------\n");
-	printf("ÇÁ·Î±×·¥À» Ã³À½ »ç¿ëÇÏ½Ç ¶§´Â »öÀÎ ÆÄÀÏ(member.idx)°ú\n µ¥ÀÌÅÍ ÆÄÀÏ(member.dat)ÀÌ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.\n");
-	printf("µû¶ó¼­, 'N'À» ´­·¯ ½Ã½ºÅÛ ÃÊ±âÈ­ÇÑ ´ÙÀ½¿¡ »ç¿ëÇÏ½Ê½Ã¿À.\n");
-	printf("´Ü, µ¥ÀÌÅÍ ÆÄÀÏÀÌ Á¸ÀçÇÒ °æ¿ì¿¡ ÀÌ ÀÛ¾÷À» ÇÏ½Ã¸é ±âÁ¸ÀÇ µ¥ÀÌÅÍ¸¦\n");
-	printf("ÀÒ¾î¹ö¸®°Ô µÇ¹Ç·Î ÁÖÀÇÇØ¾ß ÇÕ´Ï´Ù.\n");
-	printf("ÀúÀå µ¥ÀÌÅÍ°¡ ¸¹¾ÆÁö¸é 'x'¸¦ ´­·¯ ÀÚ·á¸¦ Á¤¸®ÇÏ½Ê½Ã¿À.\n");
-	printf("ÀÚ·á¸¦ Á¤¸®ÇÏ½Ã¸é µ¥ÀÌÅÍ °Ë»ö¼Óµµ°¡ Çâ»óµË´Ï´Ù.\n");
+	printf("í”„ë¡œê·¸ë¨ì„ ì²˜ìŒ ì‚¬ìš©í•˜ì‹¤ ë•ŒëŠ” ìƒ‰ì¸ íŒŒì¼(member.idx)ê³¼\n ë°ì´í„° íŒŒì¼(member.dat)ì´ ì¡´ì¬í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.\n");
+	printf("ë”°ë¼ì„œ, 'N'ì„ ëˆŒëŸ¬ ì‹œìŠ¤í…œ ì´ˆê¸°í™”í•œ ë‹¤ìŒì— ì‚¬ìš©í•˜ì‹­ì‹œì˜¤.\n");
+	printf("ë‹¨, ë°ì´í„° íŒŒì¼ì´ ì¡´ì¬í•  ê²½ìš°ì— ì´ ì‘ì—…ì„ í•˜ì‹œë©´ ê¸°ì¡´ì˜ ë°ì´í„°ë¥¼\n");
+	printf("ìƒì–´ë²„ë¦¬ê²Œ ë˜ë¯€ë¡œ ì£¼ì˜í•´ì•¼ í•©ë‹ˆë‹¤.\n");
+	printf("ì €ì¥ ë°ì´í„°ê°€ ë§ì•„ì§€ë©´ 'x'ë¥¼ ëˆŒëŸ¬ ìë£Œë¥¼ ì •ë¦¬í•˜ì‹­ì‹œì˜¤.\n");
+	printf("ìë£Œë¥¼ ì •ë¦¬í•˜ì‹œë©´ ë°ì´í„° ê²€ìƒ‰ì†ë„ê°€ í–¥ìƒë©ë‹ˆë‹¤.\n");
 	
 	getchar(); getchar();
 
@@ -595,7 +596,7 @@ void view_help() {
 
 void printTitle(){
 	printf("==========================================================\n");
-	printf("MMS(Membership Management System) °³¹ß 1´Ü°è ver 0.9\n");
+	printf("MMS(Membership Management System) ê°œë°œ 1ë‹¨ê³„ ver 0.9\n");
 	printf("==========================================================\n\n");
 	
 	return;
