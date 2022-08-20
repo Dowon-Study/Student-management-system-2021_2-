@@ -11,7 +11,7 @@ struct _info
 	unsigned long number;
 	char id[10], passworld[10], name[20], gender[2], age[2], rank[20], company[30], address[40], post[7], phone[15], handphone[15];
 
-};
+}; 
 typedef struct _info INFO;
 
 struct _pginfo
